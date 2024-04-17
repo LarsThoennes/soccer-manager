@@ -1,0 +1,6 @@
+<h1 class="m-16">Nächste Spiele</h1>
+<mat-card class="m-16" *ngFor="let match of footballMatches">
+  <mat-card-header>{{ match.homeTeam.name }} vs. {{ match.awayTeam.name }}</mat-card-header>
+  <mat-card-content>{{ match.utcDate | date:'medium' }}</mat-card-content>
+  <mat-card-content>{{ match.competition.name }}</mat-card-content>
+</mat-card>

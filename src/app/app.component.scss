@@ -1,0 +1,38 @@
+mat-drawer-container {
+  height: 100vh;
+
+  mat-drawer {
+    min-width: 15vw;
+    background-color: #344955;
+    color: white;
+
+    .logo-container {
+      height: 28px;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  mat-toolbar {
+    background-color: #232F34;
+    color: white;
+  }
+}
+
+.menu-items {
+  padding-top: 20px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+
+  .menu-link {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    font-size: 20px;
+    padding-left: 20px;
+
+    &:hover {
+      background: grey;
+    }
+  }
+}

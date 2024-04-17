@@ -1,3 +1,27 @@
-<h1>Hallo welt</h1>
+<mat-drawer-container class="mat-drawer-container" autosize>
+  <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
+    <div [routerLink]="''"  class="logo-container p-18">
+      Platz Für Logo
+    </div>
 
-<router-outlet></router-outlet>
+    <ul class="menu-items">
+      <li class="menu-link cursor-pointer" [routerLink]="''">Nächste Spiele</li>
+      <li class="menu-link cursor-pointer" [routerLink]="''">Bundesliga</li>
+      <li class="menu-link cursor-pointer" [routerLink]="'PremierLeagueComponent'">Premierleauge</li>
+    </ul>
+
+  </mat-drawer>
+  <div>
+    <mat-toolbar>
+      <mat-icon class="menu-icon cursor-pointer" (click)="drawer.toggle()">menu</mat-icon>
+      <span>Soccer-Manager</span>
+    </mat-toolbar>
+
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</mat-drawer-container>
+
+
