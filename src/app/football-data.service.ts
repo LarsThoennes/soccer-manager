@@ -7,16 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class FootballDataService {
 
-  private apiUrl = 'https://api.football-data.org/v2/';
-  private apiKey = 'b15c0be9bdd84016b736ea883720c774';
+//   private apiUrl = 'https://api.football-data.org/v2/';
+//   private apiKey = 'b15c0be9bdd84016b736ea883720c774';
 
-  constructor(private http: HttpClient) { }
+//   constructor(private http: HttpClient) { }
 
-  getFootballMatches(): Observable<any> {
-    const url = `${this.apiUrl}matches`; // Pfad für Spiele
-    const headers = new HttpHeaders({ 'X-Auth-Token': this.apiKey });
-    return this.http.get(url, { headers });
-  }
-}
-
-
+//   getFootballMatches(): Observable<any> {
+//     const url = `${this.apiUrl}matches`;
+//     console.log(url);
+//     const headers = new HttpHeaders({ 'X-Auth-Token': this.apiKey });
+//     console.log(headers)
+//     return this.http.get(url, { headers });
+//   }
+ }

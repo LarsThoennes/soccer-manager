@@ -11,6 +11,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 import { GamesCurrentComponent } from './games-current/games-current.component';
 import { GameNextComponent } from './game-next/game-next.component';
@@ -31,6 +33,7 @@ import { PremierLeagueComponent } from './premier-league/premier-league.componen
     MatIconModule,
     MatGridListModule,
     MatCardModule,
+    MatDialogModule,
     HttpClientModule
   ],
   providers: [

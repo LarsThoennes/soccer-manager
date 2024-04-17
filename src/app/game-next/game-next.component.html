@@ -1,6 +1,12 @@
-<h1 class="m-16">Nächste Spiele</h1>
-<mat-card class="m-16" *ngFor="let match of footballMatches">
-  <mat-card-header>{{ match.homeTeam.name }} vs. {{ match.awayTeam.name }}</mat-card-header>
-  <mat-card-content>{{ match.utcDate | date:'medium' }}</mat-card-content>
-  <mat-card-content>{{ match.competition.name }}</mat-card-content>
-</mat-card>
+<div class="bg">
+  <h1 class="m-16">Nächste Spiele</h1>
+  <mat-card  class="m-16 cursor-pointer" *ngFor="let match of footballMatches">
+    <mat-card-header>{{ match.homeTeam.name }} vs. {{ match.awayTeam.name }} ({{match.competition.name}}, {{match.competition.area.name}} )</mat-card-header>
+    <mat-card-content>{{ match.utcDate | date:'medium' }}</mat-card-content>
+    <mat-card-content>{{ match.competition.name }}</mat-card-content>
+    <mat-card-content *ngIf="match.score.halfTime && match.score.halfTime.homeTeam !== null && match.score.halfTime.awayTeam !== null" >Halftime: {{ match.score.halfTime.homeTeam}} : {{ match.score.halfTime.awayTeam}}</mat-card-content>
+    <mat-card-content *ngIf="match.score.fullTime && match.score.fullTime.homeTeam !== null && match.score.fullTime.awayTeam !== null" >Fulltime: {{ match.score.fullTime.homeTeam}} : {{ match.score.fullTime.awayTeam}}</mat-card-content>
+    <mat-card-content *ngIf="match.score.winner === 'HOME_TEAM'">Winner : {{ match.homeTeam.name }}</mat-card-content>
+    <mat-card-content *ngIf="match.score.winner === 'AWAY_TEAM'">Winner : {{ match.awayTeam.name }}</mat-card-content>
+  </mat-card>
+</div>

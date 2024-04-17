@@ -6,24 +6,24 @@ import { FootballDataService } from '../football-data.service';
   templateUrl: './premier-league.component.html',
   styleUrl: './premier-league.component.scss'
 })
-export class PremierLeagueComponent implements OnInit{
+export class PremierLeagueComponent implements OnInit {
   footballMatches: any[] = [];
 
   constructor(private footballDataService: FootballDataService) { }
 
   ngOnInit(): void {
-    this.fetchFootballMatches();
+    // this.fetchFootballMatches();
   }
 
-  fetchFootballMatches(): void {
-    this.footballDataService.getFootballMatches().subscribe(
-      (matches: any) => {
-        this.footballMatches = matches.matches;
-        console.log(this.footballMatches)
-      },
-      (error: any) => {
-        console.error('Error fetching football matches:', error);
-      }
-    );
-  }
+  // fetchFootballMatches(): void {
+  //   this.footballDataService.getFootballMatches().subscribe(
+  //     (matches: any) => {
+  //       this.footballMatches = matches.matches;
+  //       console.log(this.footballMatches)
+  //     },
+  //     (error: any) => {
+  //       console.error('Error fetching football matches:', error);
+  //     }
+  //   );
+  // }
 }

@@ -3,18 +3,11 @@ mat-drawer-container {
 
   mat-drawer {
     min-width: 15vw;
-    background-color: #344955;
-    color: white;
 
     .logo-container {
       height: 28px;
       border-bottom: 1px solid black;
     }
-  }
-
-  mat-toolbar {
-    background-color: #232F34;
-    color: white;
   }
 }
 

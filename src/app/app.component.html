@@ -1,5 +1,5 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
-  <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
+  <mat-drawer color="secondary" #drawer class="sidenav" [opened]="true" mode="side">
     <div [routerLink]="''"  class="logo-container p-18">
       Platz Für Logo
     </div>
@@ -12,9 +12,9 @@
 
   </mat-drawer>
   <div>
-    <mat-toolbar>
+    <mat-toolbar color="primary">
       <mat-icon class="menu-icon cursor-pointer" (click)="drawer.toggle()">menu</mat-icon>
-      <span>Soccer-Manager</span>
+      <span color="On Primary">Soccer-Manager</span>
     </mat-toolbar>
 
     <div class="router-container">
