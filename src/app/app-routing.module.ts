@@ -6,7 +6,7 @@ import { PremierLeagueComponent } from './premier-league/premier-league.componen
 
 const routes: Routes = [
   {path: '', component: GameNextComponent},
-  {path: 'PremierLeagueComponent', component: PremierLeagueComponent},
+  {path: 'Premierleauge', component: GamesCurrentComponent},
 
 ];
 
